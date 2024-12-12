@@ -1,0 +1,102 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    height: 100%; /* Ensures full height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Particle Container */
+#particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Ensure particles stay in the background */
+}
+
+/* Heading Section */
+.heading {
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 200px; /* Ensures "My Contact" appears 200px from the top */
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.heading p {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Adds spacing below the heading */
+}
+
+/* Card Styles */
+.card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+    color: #bfe6ff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card:active {
+    background-color: #bfe6ff;
+    color: #000;
+}
+
+/* Icon and Text in Card */
+.front-content i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.front-content p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
